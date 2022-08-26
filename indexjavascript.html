@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar HTML</HTML></title>
+</head>
+<body>
+    <h1 id="judul">Belajar HTML</h1>
+    <p id="konten"></p>
+
+    <form>
+            <input id="bilangan1" type="number"> + <input id="bilangan2" type="number"> =
+            <span id="hasil"></span>
+            <br>
+            <button type="button" id="btn_hasil">Hasil</button>
+    </form>
+    <script type="text/javascript">
+
+        var nama = "Agus"
+        var nama_belakang = "Kopling"
+        var umur = 12
+        let tinggi = 165
+        const phi = 3.14
+        var hobi = ["main game", "ngoding", "menggambar"]
+
+        var bilangan1 = 10
+        var bilangan2 = 15
+
+        console.log(nama)
+        console.log(umur)
+        console.log(bilangan1 + bilangan2)
+        console.log(nama + nama_belakang)
+        console.log(hobi)
+        console.log(hobi[2])
+
+         document.getElementById("konten").innerHTML = "Halo"
+         document.getElementById("judul").style.color = "blue"
+
+         document.getElementById("btn_hasil").onclick = function(){
+            var bil1 = document.getElementById("bilangan1")
+            var bil2 = document.getElementById("bilangan2")
+            var hasil = document.getElementById("hasil")
+            var hasil_teks = parseInt(bil1.value) + parseInt(bil2.value)
+            hasil.innerHTML = hasil_teks
+         }
+         
+         
+    </script>
+</body>
+</html>
