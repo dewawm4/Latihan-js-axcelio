@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perulangan</title>
+</head>
+<body>
+    <h1>Perulangan</h1>
+    <script type="text/javascript">
+
+        /*perulangan for
+        for (init value; kondisi; iterator){
+            //block for
+        }
+        */
+        //for (var i = 0; i < 5; i++){
+          //  console.log(`Halo apa kabar ? `)
+            //}       
+            
+        /*
+            while (kondisi){
+
+            }
+        */
+
+            //var j = 0
+            //while (j < 6){
+	          //  console.log(`Halo apa kabar ? `)
+                //j++
+            //}
+
+        /*
+            Tugas
+        */    
+            for(var k = 1; k <= 5; k++){
+                
+                var kolom =""
+
+                for (var l = 1; l <= k; l++){
+                    kolom = kolom + "*"
+                }
+
+                console.log(kolom)
+            }
+
+        /*
+            // 1 + 2 + 3 + 4 + 5 + 6 
+        */
+            var hasil = 0
+            for (var i = 1; i <= 10; i++){
+                hasil = hasil + i
+            }
+
+            console.log("hasil = ", hasil)
+
+            for (var i = 1; i <= 10; i++){
+                console.log(`5 * ${i} = ${5*i}`)
+            }
+
+        /*
+            Function
+        */
+            function segitiga1(panjang) {
+                let hasil = '';
+                for (let i = 0; i < panjang; i++) {
+                    for (let j = 0; j <= i; j++) {
+                        hasil += '* ';
+                    }
+                    hasil += '\n';
+                }
+                return hasil;
+            }
+            console.log(segitiga1(5));
+
+    </script>
+
+</body>
+</html>
