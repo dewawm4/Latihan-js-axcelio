@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        #p2 {
+            color: blue;
+        }
+        .p3 {
+            color:brown;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+
+        <p>Halo, ini adalah paragraf</p>
+        <p id="p2"></p>
+        <p class="p3"></p>
+
+    </div>
+    <script type="text/javascript">
+
+        var divutama = document.querySelector("div")
+        //divutama.innerHTML = "Teks ini akan menggantikan isi div"
+        var p2 = document.querySelector("#p2")
+        var p3 = document.querySelector(".p3")
+
+        p2.innerHTML = "Paragraf kedua"
+        p3.innerHTML = "Ini adalah paragraf ketiga"
+
+    </script>
+</body>
+</html>
