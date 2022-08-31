@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    
+    <ul id="daftar_hobi">
+    </ul>
+
+    <ul id="bilanganprima">
+    </ul>
+
+    <script type="text/javascript">
+        
+        var hobi = ["ngegame", "membaca", "main bola", "menggambar", "makan", "tidur"]
+        var bilangan_prima = [1, 2, 3, 5, 7]
+
+        console.log(hobi)
+        console.log(hobi[1])
+        console.log(bilangan_prima)
+        console.log(bilangan_prima[2])
+
+        //pakai nama var target.lenght jika tidak tau seberapa panjang index dari id target. contoh:
+        //var daftar_hobi=document.querySelector("#daftar_hobi")
+        //for(var i = 0; i < hobi.length; i = i + 1){
+            //var item = document.createElement("li")
+            //<li></li>
+           // item.innerHTML = hobi[i]
+            //<li></li>
+            //daftar_hobi.append(item)
+        //}
+
+        //var daftar_hobi=document.querySelector("#daftar_hobi")
+        //for(var i = 0; i < 4; i = i + 1){
+            //var item = document.createElement("li")
+            //<li></li>
+           // item.innerHTML = hobi[i]
+            //<li></li>
+            //daftar_hobi.append(item)
+        //}
+        
+        //contoh cara penulisan lain menggunakan atribut item dan foreach
+
+        hobi.push("mandi")
+        console.log(hobi)
+        hobi.pop("mandi")
+        console.log(hobi)
+
+        hobi.forEach((item) => {
+           var li = document.createElement("li")
+           li.innerHTML = item
+           daftar_hobi.append(li)
+        })
+
+        var bilanganprima=document.querySelector("#bilanganprima")
+        for(var i = 0; i < 5; i = i + 1){
+            var item = document.createElement("li")
+            item.innerHTML = bilangan_prima[i]
+            bilanganprima.append(item)
+        }
+
+    </script>
+</body>
+</html>
