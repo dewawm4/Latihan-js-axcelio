@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <h1><strong>Object</strong></h1>
+    <script type="text/javascript">
+
+        var Dewa = {
+            nama: "Dewa",
+            umur: 31,
+            lulusSMA: true,
+            hobi:["ngoding", "main game"],
+            tambahUmur: function(){
+                this.umur = this.umur+1
+            },
+            checklulus: function(){
+                return this.lulusSMA
+            }
+        }
+        var Devin = {
+            nama: "Devin",
+            umur: 16,
+            lulusSMA: false,
+            hobi:["ngoding", "membaca"],
+            tambahUmur: function(x){
+                this.umur = this.umur+x
+            },
+            checklulus: function(){
+                return this.lulusSMA
+            }
+        }
+
+        console.log(Devin.umur)
+        console.log(Devin.nama)
+        console.log(Devin.lulusSMA)
+        console.log(Devin.hobi[0])
+        Devin.tambahUmur()
+        console.log(Devin.umur)
+
+        console.log(Dewa.umur)
+        console.log(Dewa.nama)
+        console.log(Dewa.lulusSMA)
+        console.log(Dewa.hobi[0])
+        Dewa.tambahUmur()
+        console.log(Dewa.umur)
+    </script>
+    
+</body>
+</html>
