@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="bungkus">
+        <input type="text" id="bil1">
+        <span id="operator">+</span>
+        <input type="text" id="bil2">
+        =
+        <input type="text" id="hasil">
+    </div>
+    <div>
+        <select id="operasi">
+            <option value=""></option>
+            <option value="Penjumlahan">Penjumlahan</option>
+            <option value="Pengurangan">Pengurangan</option>
+            <option value="Perkalian">Perkalian</option>
+            <option value="Pembagian">Pembagian</option>
+        </select>
+    </div>
+    <div>
+        <button id="hitung">Tambah</button>
+    </div>
+    <script type="text/javascript">
+        var input_bil1 = document.querySelector("#bil1")
+        var input_bil2 = document.querySelector("#bil2")
+        var input_hasil = document.querySelector("#hasil")
+        var btn_hitung = document.querySelector("#hitung")
+        var operator = document.querySelector("#operator")
+        var operasi = document.querySelector("#operasi")
+
+        btn_hitung.addEventListener("click", function(){
+            console.log(input_bil1.value)
+            console.log(input_bil2.value)
+
+            if(operasi.value == "Penjumlahan"){
+                input_hasil.value = parseInt(input_bil1.value) + parseInt(input_bil2.value)
+            }else if(operasi.value == "Pengurangan"){
+                input_hasil.value = parseInt(input_bil1.value) - parseInt(input_bil2.value)
+            }else if(operasi.value == "Perkaliann"){
+                input_hasil.value = parseInt(input_bil1.value) * parseInt(input_bil2.value)
+            }else if(operasi.value == "Pembagian"){
+                input_hasil.value = parseInt(input_bil1.value) / parseInt(input_bil2.value)
+            }
+
+        })
+
+        operasi.addEventListener("change",function(){
+            if(this.value == "Perkalian"){
+                operator.innerHTML = "*"
+                btn_hitung.innerHTML = "kali"
+            } else if(this.value == "Pembagian"){
+                operator.innerHTML = "/"
+                btn_hitung.innerHTML = "bagi"
+            } else if(this.value == "Penjumlahan"){
+                operator.innerHTML = "+"
+                btn_hitung.innerHTML = "jumlahkan"
+            } else if(this.value == "Pengurangan"){
+                operator.innerHTML = "-"
+                btn_hitung.innerHTML = "kurang"
+            }
+            console.log("Operasi berubah")
+        })
+    </script>
+</body>
+</html>
